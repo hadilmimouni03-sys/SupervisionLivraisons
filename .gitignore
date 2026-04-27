@@ -1,0 +1,83 @@
+# ============================================================
+#  OS / Editors
+# ============================================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# ============================================================
+#  Secrets / env
+# ============================================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ============================================================
+#  Backend (Node.js / ExpressJS)
+# ============================================================
+backend/node_modules/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+backend/coverage/
+backend/.nyc_output/
+backend/dist/
+backend/build/
+backend/.cache/
+
+# ============================================================
+#  Docker
+# ============================================================
+# Local override files - keep tracked compose files
+docker-compose.override.yml
+docker-compose.*.local.yml
+
+# ============================================================
+#  Android (Gradle / Android Studio)
+# ============================================================
+android/.gradle/
+android/build/
+android/app/build/
+android/captures/
+android/.externalNativeBuild/
+android/.cxx/
+android/local.properties
+android/.navigation/
+android/release/
+
+# Generated files
+android/**/generated/
+android/app/src/main/assets/secrets.properties
+
+# Lint / proguard
+android/app/lint/
+android/app/proguard-rules.pro.local
+
+# Keystore (NEVER commit signing keys)
+*.jks
+*.keystore
+keystore.properties
+key.properties
+
+# ============================================================
+#  Logs / temp
+# ============================================================
+*.log
+logs/
+tmp/
+temp/

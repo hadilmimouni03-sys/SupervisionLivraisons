@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Supervision Livraisons</string>
+
+    <!-- Login -->
+    <string name="login_subtitle">Connexion controleur / livreur</string>
+    <string name="login_label">Login</string>
+    <string name="password_label">Mot de passe</string>
+    <string name="login_button">Se connecter</string>
+
+    <!-- Common -->
+    <string name="logout">Se deconnecter</string>
+    <string name="apply">Appliquer</string>
+    <string name="send">Envoyer</string>
+    <string name="required">Obligatoire</string>
+    <string name="empty_list">Aucune livraison</string>
+    <string name="greeting">Bonjour, %1$s</string>
+
+    <!-- Controller home -->
+    <string name="controller_dashboard_subtitle">Tableau de bord controleur</string>
+    <string name="menu_today">Livraisons du jour</string>
+    <string name="menu_today_desc">Consulter et trier les livraisons d aujourd hui</string>
+    <string name="menu_all">Toutes les livraisons</string>
+    <string name="menu_all_desc">Recherche par periode, livreur, etat, commande</string>
+    <string name="menu_dashboard">Tableau de bord</string>
+    <string name="menu_dashboard_desc">Statistiques par livreur et par client</string>
+    <string name="menu_send_info">Envoyer une info</string>
+    <string name="menu_send_info_desc">Message en temps reel aux livreurs</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_messages_desc">Boite de reception</string>
+
+    <!-- Filters -->
+    <string name="filter_state">Etat</string>
+    <string name="filter_driver_id">ID livreur</string>
+    <string name="filter_date_from">Du</string>
+    <string name="filter_date_to">Au</string>
+    <string name="filter_order_no">No commande</string>
+
+    <!-- Dashboard -->
+    <string name="tab_by_driver">Par livreur</string>
+    <string name="tab_by_client">Par client</string>
+
+    <!-- Messages -->
+    <string name="select_recipient">Destinataire</string>
+    <string name="broadcast_all">Tous les livreurs</string>
+    <string name="message_content">Message</string>
+    <string name="message_sent">Message envoye</string>
+    <string name="no_messages">Aucun message</string>
+
+    <!-- Driver -->
+    <string name="driver_today_title">Mes livraisons (%1$s)</string>
+    <string name="driver_no_deliveries">Aucune livraison aujourd hui</string>
+    <string name="pending_sync">A synchroniser</string>
+    <string name="refresh_error">Erreur: %1$s</string>
+
+    <!-- Detail -->
+    <string name="delivery_detail">Detail livraison</string>
+    <string name="client">Client</string>
+    <string name="address">Adresse</string>
+    <string name="phone">Telephone</string>
+    <string name="email">Email</string>
+    <string name="items_count">Nombre d articles</string>
+    <string name="total_amount">Montant total</string>
+    <string name="payment_mode">Mode de paiement</string>
+    <string name="items">Articles</string>
+    <string name="remark">Remarque</string>
+    <string name="call">Appeler</string>
+    <string name="open_maps">Google Maps</string>
+    <string name="change_state">Changer l etat</string>
+    <string name="choose_state">Choisir l etat</string>
+    <string name="reason_required">Raison obligatoire (non livree)</string>
+    <string name="reason_hint">Saisir la raison</string>
+    <string name="status_updated">Etat mis a jour</string>
+
+    <!-- Urgence -->
+    <string name="send_urgence">Urgence</string>
+    <string name="urgence_sent">Message d urgence envoye</string>
+    <string name="urgence_reason">Raison (client absent, refus, ...)</string>
+    <string name="order_number">No commande</string>
+    <string name="fill_all_fields">Remplir tous les champs</string>
+    <string name="invalid_nocde">No commande invalide</string>
+</resources>

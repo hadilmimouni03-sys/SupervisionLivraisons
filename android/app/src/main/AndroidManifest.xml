@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.SupervisionLivraisons">
+
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Controller -->
+        <activity android:name=".ui.controller.ControllerHomeActivity" android:exported="false"/>
+        <activity android:name=".ui.controller.DeliveriesListActivity" android:exported="false"/>
+        <activity android:name=".ui.controller.DashboardActivity"     android:exported="false"/>
+        <activity android:name=".ui.controller.SendInfoActivity"      android:exported="false"/>
+
+        <!-- Driver -->
+        <activity android:name=".ui.driver.DriverHomeActivity"        android:exported="false"/>
+        <activity android:name=".ui.driver.DeliveryDetailActivity"    android:exported="false"/>
+        <activity android:name=".ui.driver.SendUrgenceActivity"       android:exported="false"/>
+
+        <!-- Common -->
+        <activity android:name=".ui.common.MessagesActivity"          android:exported="false"/>
+
+    </application>
+</manifest>

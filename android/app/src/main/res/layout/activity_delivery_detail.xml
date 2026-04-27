@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:title="@string/delivery_detail"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="?attr/colorOnPrimary"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvNocde"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvEtat"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View android:background="?attr/colorOutline"
+                android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="12dp"/>
+
+            <TextView android:text="@string/client" android:textStyle="bold" android:textSize="16sp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvClient" android:textSize="20sp" android:layout_marginTop="2dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <TextView android:text="@string/address" android:textStyle="bold" android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvAdresse" android:textSize="18sp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <LinearLayout android:orientation="horizontal" android:layout_marginTop="10dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCall"
+                    android:text="@string/call"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="6dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMaps"
+                    android:text="@string/open_maps"
+                    android:textSize="16sp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="6dp"/>
+            </LinearLayout>
+
+            <LinearLayout android:orientation="horizontal" android:layout_marginTop="14dp"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="@string/phone" android:textSize="16sp"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:textStyle="bold" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tvTel" android:textSize="16sp"
+                    android:autoLink="phone"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="@string/email" android:textSize="16sp"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:textStyle="bold" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tvMail" android:textSize="16sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View android:background="?attr/colorOutline"
+                android:layout_width="match_parent" android:layout_height="1dp"
+                android:layout_marginVertical="12dp"/>
+
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="@string/items_count" android:textSize="16sp" android:textStyle="bold"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tvNbArticles" android:textSize="20sp" android:textStyle="bold"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="@string/total_amount" android:textSize="16sp" android:textStyle="bold"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tvMontant" android:textSize="22sp" android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:text="@string/payment_mode" android:textSize="16sp" android:textStyle="bold"
+                    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"/>
+                <TextView android:id="@+id/tvModePay" android:textSize="16sp"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView android:text="@string/items"
+                android:textStyle="bold" android:textSize="16sp"
+                android:layout_marginTop="14dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvArticles" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <TextView android:text="@string/remark"
+                android:textStyle="bold" android:textSize="16sp"
+                android:layout_marginTop="14dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvRemarque" android:textSize="15sp"
+                android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChangeStatus"
+        android:text="@string/change_state"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"/>
+
+</LinearLayout>

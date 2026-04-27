@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- High-contrast palette suitable for outdoor use ("under the sun"). -->
+    <color name="primary">#0B5FA5</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#D6E4FF</color>
+    <color name="on_primary_container">#001A41</color>
+
+    <color name="secondary">#FFA000</color>
+    <color name="on_secondary">#000000</color>
+
+    <color name="error">#B3261E</color>
+    <color name="on_error">#FFFFFF</color>
+
+    <color name="background">#FFFFFF</color>
+    <color name="on_background">#1B1B1F</color>
+    <color name="surface">#F8F9FF</color>
+    <color name="on_surface">#1B1B1F</color>
+    <color name="outline">#73777F</color>
+</resources>

@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: supervision_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: BDG_LivraisonCom_25
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      # Named volume — survives `docker compose down` and container recreation.
+      - pgdata:/var/lib/postgresql/data
+      # Init scripts only run on first startup (when pgdata is empty).
+      - ./backend/db/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d BDG_LivraisonCom_25"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: ./backend
+    container_name: supervision_api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      PORT: 3000
+      PGHOST: db
+      PGPORT: 5432
+      PGDATABASE: BDG_LivraisonCom_25
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      JWT_SECRET: change_me_in_production
+      JWT_EXPIRES_IN: 12h
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:
+    name: supervision_pgdata
